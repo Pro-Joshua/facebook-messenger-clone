@@ -47,10 +47,21 @@ function App() {
     <div className="container">
       <div className="title-container">
         <h1 className="title">
-          <img src="https://facebookbrand.com/wp-content/uploads/2019/10/Messenger_Logo_Color_RGB.png?w=100&h=100"></img>
+          <img src="https://facebookbrand.com/wp-content/uploads/2019/10/Messenger_Logo_Color_RGB.png?w=50&h=50"></img>
         </h1>
         <h3 className="title">Welcome {username}</h3>
       </div>
+      <FlipMove className="message_container">
+        {messages.map((
+          { id, message } //username can refer to another person
+        ) => (
+          <Message
+            key={id}
+            username={username} //user who logined
+            message={message}
+          />
+        ))}
+      </FlipMove>
       <form className="input_container">
         <FormControl>
           <InputLabel>Enter a message...</InputLabel>
@@ -73,17 +84,6 @@ function App() {
           </IconButton>
         </FormControl>
       </form>
-      <FlipMove className="message_container">
-        {messages.map((
-          { id, message } //username can refer to another person
-        ) => (
-          <Message
-            key={id}
-            username={username} //user who logined
-            message={message}
-          />
-        ))}
-      </FlipMove>
     </div>
   );
 }
