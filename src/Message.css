@@ -1,0 +1,26 @@
+.message_card {
+  text-align: center;
+  max-width: 70%;
+  width: fit-content;
+  text-align: left;
+  display: block;
+  position: static;
+  padding: 5px;
+  margin: 5px 0;
+}
+.message_guestCard > div,
+.message_userCard > div {
+  padding: 5px !important;
+}
+.message_user {
+  text-align: left !important;
+  margin-left: auto;
+}
+.message_guestCard {
+  background-color: rgb(216, 216, 216) !important;
+}
+.message_userCard,
+.message_userCardTtext {
+  background-color: #0b81ff !important;
+  color: white !important;
+}
